@@ -1,18 +1,18 @@
 provider "aws" {
   profile    = "default"
-  region     = "${var.region}"
+  region     = "us-east-1"
 }
 
 // first AMI
 resource "aws_instance" "example" {
-  ami           = "${var.instance_ami}"
-  instance_type = "${var.instance_micro}"
+  ami           = "ami-b374d5a5"
+  instance_type = "t2.micro"
 }
 
 // second AMI
 resource "aws_instance" "another" {
-  ami           = "${var.instance_ami}"
-  instance_type = "${var.instance_micro}"
+  ami           = "ami-b374d5a5"
+  instance_type = "t2.micro"
 }
 
 resource "aws_eip" "ip" {
