@@ -3,7 +3,14 @@ provider "aws" {
   region     = "us-east-1"
 }
 
+// first AMI
 resource "aws_instance" "example" {
+  ami           = "ami-b374d5a5"
+  instance_type = "t2.micro"
+}
+
+// second AMI
+resource "aws_instance" "another" {
   ami           = "ami-b374d5a5"
   instance_type = "t2.micro"
 }
